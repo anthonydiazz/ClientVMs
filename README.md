@@ -87,6 +87,80 @@ Each Windows 10 VM should be created in VirtualBox and configured as follows:
 
 
 
+## Step 6: Setup Desktop2 and Bruce Wayne
+
+1. Create another Windows 10 VM
+
+2. Join it to the domain as Desktop2
+
+3. Log in using the bwayne domain user
+
+4. Confirm IP address and DNS using ipconfig /all
+
+![Install Requests](./ad_p2/p10bwayne.png)
+
+The image below shows that the computer has connected to the DHCP server and shows that it has been given an IP Address
+
+![Install Requests](./ad_p2/dhcplease.png)
+
+The image below shows that the computer has connected to the domain controller -> anthonytech.com
+
+![Install Requests](./ad_p2/adconnect.png)
+
+
+
+
+## Step 7: Apply Password Policies via GPO
+
+1. Open Group Policy Management on the server
+
+![Install Requests](./ad_p2/passwordpolicies.png)
+
+The image above are the original settings that were configured for the password policies which is not good enough wtih settings: 
+
+- Max password age: 42 days
+- Lockout threshold: none
+- Lockout duration: none
+
+We have to change this
+
+
+2. Edit Default Domain Policy
+
+
+
+3. Under:
+
+   - Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies
+
+The image below I am adjusting the password policies 
+
+![Install Requests](./ad_p2/pwd2.png)
+
+
+The image below I am adjusting the account lockout settings 
+
+
+![Install Requests](./ad_p2/acttlockout.png)
+
+
+4. Set:
+
+
+- Min password length: 7 characters
+
+- Max password age: 90 days
+
+- Lockout threshold: 3 attempts
+
+- Lockout duration: 10 minutes
+
+Image Below confirms changes 
+
+![Install Requests](./ad_p2/gpmdne.png)
+
+
+
 
 
 
