@@ -162,5 +162,64 @@ Image Below confirms changes
 
 
 
+## Step 8: Disable Task Manager for User (Bruce Wayne Only) only to demonstrate what else GPO can do 
 
+1. Create a new GPO named Task Manager
+
+
+![Install Requests](./ad_p2/gpoObject.png)
+
+
+
+2. Link GPO to the domain, but filter it to only Bruce Wayne
+
+![Install Requests](./ad_p2/gpo2.png)
+
+
+
+3. Under User Configuration > Policies > System > Ctrl+Alt+Del Options
+
+
+![Install Requests](./ad_p2/gpo3.png)
+
+
+
+4. Enable: Remove Task Manager
+
+![Install Requests](./ad_p2/remTSK.png)
+
+
+## Step 9:  Verify GPO Effectiveness
+
+
+1. Log in as Bruce Wayne on Desktop2
+
+2. Right-click taskbar — verify "Task Manager" is grayed out or blocked
+
+
+![Install Requests](./ad_p2/tskMGR2.png)
+
+
+
+
+## To conclude Part 2: 
+
+In this part of the lab project, we successfully:
+
+- Set up two Windows 10 virtual machines for internal network use
+
+- Joined both machines to the Active Directory domain
+
+- Verified DHCP functionality and IP allocation
+
+- Installed RSAT tools on the Helpdesk account to enable remote administrative access
+
+- Created a Group Policy Object (GPO) to enforce organizational policies
+
+- Targeted and tested the GPO by restricting Task Manager access for Bruce Wayne
+
+
+This part established the practical connection between client workstations and centralized domain services, laying the foundation for secure administrative management in a simulated enterprise environment.
+
+If you want to go back to Part 1 : ### 🔗 [← Go to Part 1: Windows Server 2022 Setup](https://github.com/anthonydiazz/Server2022)
 
