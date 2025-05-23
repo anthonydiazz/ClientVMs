@@ -223,3 +223,5 @@ This part established the practical connection between client workstations and c
 
 If you want to go back to Part 1 :🔗 [← Go to Part 1: Windows Server 2022 Setup](https://github.com/anthonydiazz/Server2022)
 
+
+If you want to go to Part 3 :🔗 [← Part 3: Troubleshooting - Account Lockout and Remote Assistance](https://github.com/anthonydiazz/ClientTroubleshooting)
